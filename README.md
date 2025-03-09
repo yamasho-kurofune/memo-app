@@ -36,8 +36,11 @@ npm install
 `.env.local`ファイルを作成し、以下の内容を追加します：
 
 ```
-NEXT_PUBLIC_SUPABASE_URL=https://xiazceibxmohjokozjrk.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
+
+これらの環境変数は、Supabaseダッシュボードの「Project Settings」→「API」セクションから取得できます。
 
 ### 4. Supabaseのセットアップ
 
