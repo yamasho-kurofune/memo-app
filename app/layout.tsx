@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <script src="/js/dom-fix.js" defer></script>
+        <script src="/fix-script.js" defer></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

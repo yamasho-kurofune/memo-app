@@ -60,8 +60,8 @@ export const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
         }
       }
 
-      router.push('/');
-      router.refresh();
+      // 成功したら強制的にホームページに移動して再読み込み
+      window.location.href = '/';
     } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : '保存中にエラーが発生しました';
       setError(errorMessage);
@@ -88,8 +88,8 @@ export const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
         }
         throw error;
       }
-      router.push('/');
-      router.refresh();
+      // 成功したら強制的にホームページに移動して再読み込み
+      window.location.href = '/';
     } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : '削除中にエラーが発生しました';
       setError(errorMessage);
