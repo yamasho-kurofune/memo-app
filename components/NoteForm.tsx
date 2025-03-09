@@ -62,8 +62,9 @@ const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
 
       router.push('/');
       router.refresh();
-    } catch (err: any) {
-      setError(err.message || '保存中にエラーが発生しました');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : '保存中にエラーが発生しました';
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -89,8 +90,9 @@ const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
       }
       router.push('/');
       router.refresh();
-    } catch (err: any) {
-      setError(err.message || '削除中にエラーが発生しました');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : '削除中にエラーが発生しました';
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
