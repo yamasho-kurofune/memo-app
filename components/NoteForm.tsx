@@ -10,7 +10,7 @@ type NoteFormProps = {
   isEditing?: boolean;
 };
 
-const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
+export const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
   const router = useRouter();
   const [title, setTitle] = useState(note?.title || '');
   const [content, setContent] = useState(note?.content || '');
@@ -164,4 +164,5 @@ const NoteForm = ({ note, isEditing = false }: NoteFormProps) => {
   );
 };
 
+// 後方互換性のために残しておく
 export default NoteForm;
