@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import Header from '../components/Header';
 import NoteList from '../components/NoteList';
+import DataRefresher from '../components/DataRefresher';
 import { supabase } from '../lib/supabase';
 import { Note } from '../types';
 
@@ -71,6 +72,9 @@ export default function Home() {
         <Suspense fallback={<NotesLoading />}>
           <Notes />
         </Suspense>
+        
+        {/* データを定期的に更新するコンポーネント */}
+        <DataRefresher interval={3000} />
       </main>
     </div>
   );

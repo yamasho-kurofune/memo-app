@@ -1,4 +1,5 @@
 import { NoteForm } from '../../../components/NoteForm';
+import DataRefresher from '../../../components/DataRefresher';
 
 export default function NewNotePage() {
   return (
@@ -7,6 +8,9 @@ export default function NewNotePage() {
         <h1 className="text-xl font-bold">新規メモ</h1>
       </header>
       <NoteForm />
+      
+      {/* データを定期的に更新するコンポーネント */}
+      <DataRefresher interval={3000} />
     </main>
   );
 }

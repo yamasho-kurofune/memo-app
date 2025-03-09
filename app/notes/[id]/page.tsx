@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { NoteForm } from '../../../components/NoteForm';
+import DataRefresher from '../../../components/DataRefresher';
 import { supabase } from '../../../lib/supabase';
 import { Note } from '../../../types';
 
@@ -32,6 +33,9 @@ export default async function NotePage({ params }: Props) {
         <Suspense fallback={<div>Loading...</div>}>
           <NoteForm note={note} isEditing={true} />
         </Suspense>
+        
+        {/* データを定期的に更新するコンポーネント */}
+        <DataRefresher interval={3000} />
       </main>
     );
   } catch (err) {
