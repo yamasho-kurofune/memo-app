@@ -37,7 +37,6 @@ npm install
 
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://xiazceibxmohjokozjrk.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhpYXpjZWlieG1vaGpva296anJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE1MjIyMTEsImV4cCI6MjA1NzA5ODIxMX0.CHExWLJ7Jt1OlKlrBnQkYuVm5Lezbv6vQsZkzB0ik90
 ```
 
 ### 4. Supabaseのセットアップ
